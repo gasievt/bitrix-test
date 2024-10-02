@@ -1,0 +1,8 @@
+.index-incarea{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width: 380px;
+	height: 155px;
+	background: #6773871A;
+}
