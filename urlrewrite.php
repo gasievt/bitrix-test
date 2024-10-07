@@ -184,4 +184,11 @@ $arUrlRewrite=array (
     'PATH' => '/club/index.php',
     'SORT' => 100,
   ),
+	[
+		'CONDITION' => '#^/news/([A-z-_]+)#',
+		'RULE' => 'CODE=$1',
+		'ID' =>'',
+		'PATH' => '/news/index.php',
+		'SORT' => 100
+	]
 );
