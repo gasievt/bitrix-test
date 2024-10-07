@@ -4,5 +4,7 @@
 	align-items: center;
 	width: 380px;
 	height: 155px;
+	font-size: 14px;
 	background: #6773871A;
+	border-radius: 4px;
 }
