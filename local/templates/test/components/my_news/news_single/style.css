@@ -31,5 +31,8 @@
 	&:visited{
 		color: #000000;
 	}
+	&:hover{
+		text-decoration: underline;
+	}
 	text-decoration: none;
 }

@@ -41,6 +41,95 @@ header{
 .header-image{
 	height: 32px;
 }
+.form_add-container{
+	margin-top: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+.form_add-container-success{
+	margin-top: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+
+}
+.form_add-container-success .form_add-header{
+	color: #34AB47;
+}
+.form_add-container-success .form_add{
+	width:780px;
+	height: 275px;
+}
+.hidden{
+	display: none;
+}
+.form-add_inputs{
+	display: flex;
+	gap: 10px;
+}
+.form_add{
+	border-radius: 4px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #F0F1F3;
+	width: 780px;
+}
+.form_add input{
+	border: 1px 0px 0px 0px #191C2166;
+	width: 354px;
+	height: 44px;
+	margin-bottom: 10px;
+}
+#form_add-button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #191C21;
+	width: 240px;
+	height: 50px;
+	color: white;
+}
+.form_add-header{
+	color:#191C21;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.contacts-container{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.contacts-list{
+	width: 1181px;
+}
+.contact{
+	padding: 10px;
+	font-size: 14px;
+	color: #191C21B2;
+}
+.contacts-header{
+	display: flex;
+	align-items: center;
+	width: 1181px;
+	font-size: 18px;
+	padding:10px;
+}
+.contacts{
+	background: #F0F1F3;
+	display: flex;
+	flex-direction: column;
+}
+.form_add-error{
+	border: 1px solid red;
+}
 @font-face {
     font-family: "Roboto Mono";
     src: url("fonts/roboto_mono/RobotoMono-Regular.ttf");

@@ -1,6 +1,20 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <div class="newslist">
-	<div class="newslist-header"><?=$_REQUEST['CODE']?></div>
-	<div class="newslist-body"></div>
-	<div class="newslist-time"></div>
+	<?for ($i = 0; $i < $arResult['resultCount']; $i++){?>
+	<?='<div class="newslist-single">'?>
+	<?='<a' . ' href=' . $arResult[$i]['href'] . '?param=test' . ' class="newslist-name">'?><?=$arResult[$i]['NAME']?><?='</a>'?>
+	<?='<div class="newslist-body">'?><?=$arResult[$i]['DETAIL_TEXT']?><?='</div>'?>
+	<?='<div class="newslist-date">'?><?=$arResult[$i]['TIMESTAMP_X']?><?='</div>'?>
+	<?='</div>'?>
+	<?}?>
 </div>
+<?
+$APPLICATION->IncludeComponent(
+	'bitrix:main.pagenavigation',
+	'',
+	[
+		'NAV_OBJECT' => $arResult['NAV_OBJECT'],
+		'SEF_MODE' => 'Y',
+	],
+);
+?>
