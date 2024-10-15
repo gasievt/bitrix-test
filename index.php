@@ -4,14 +4,20 @@ $APPLICATION->SetTitle("Test");
 CJSCore::Init(array('ajax'));
 ?>
 <div class="index-incareas-container">
-<?for ($i = 0; $i < 3; $i++){?>
-<?$APPLICATION->IncludeComponent("bitrix:main.include","grey_incarea", Array(
-	"AREA_FILE_SHOW" => "page",
-	"AREA_FILE_SUFFIX" => "inc" . $i, 
-	"AREA_FILE_RECURSIVE" => "N",
-)
-);?>
-<?}?>
+	<?php
+	for ($i = 0; $i < 3; $i++)
+	{
+		$APPLICATION->IncludeComponent(
+			"bitrix:main.include",
+			"grey_incarea",
+			[
+				"AREA_FILE_SHOW" => "page",
+				"AREA_FILE_SUFFIX" => "inc" . $i, 
+				"AREA_FILE_RECURSIVE" => "N",
+			]
+		);
+	}
+	?>
 </div>
 <?$APPLICATION->IncludeComponent('my_news', 'news_single', [
 	'IBLOCK_ID' => 22, 
@@ -26,7 +32,7 @@ CJSCore::Init(array('ajax'));
 			<input id="form_add-phone" type="tel" name="phone" maxlength="12" placeholder="+7(___)___-__-__" required>
 		</div>
 		<div id="form_add-button">Отправить</div>
-</form>
+	</form>
 </div>
 <div class="form_add-container-success hidden">
 	<div class="form_add">

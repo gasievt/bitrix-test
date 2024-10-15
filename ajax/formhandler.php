@@ -31,4 +31,3 @@ if (empty($nameMatches) && empty($phoneMatches)) {
 }
 header("Content-type: application/json; charset=utf-8");
 echo json_encode($result);
-?>
