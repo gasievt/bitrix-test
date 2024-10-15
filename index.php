@@ -15,7 +15,7 @@ CJSCore::Init(array('ajax'));
 </div>
 <?$APPLICATION->IncludeComponent('my_news', 'news_single', [
 	'IBLOCK_ID' => 22, 
-	'arNavStartParams' => ['nTopCount' => 3],
+	'arNavStartParams' => ['nTopCount' => 3, 'nOffset' => 0],
 ]	
 );?>
 <div class="form_add-container">

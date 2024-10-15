@@ -13,8 +13,8 @@ class MyNewsComponent extends CBitrixComponent{
 			return;
 		}
 		if(!empty($this->arParams['arNavStartParams'])){
-			$limit = $arNavStartParams['nTopCount'];
-			$offset = $arNavStartParams['offset'];
+			$limit = $this->arParams['arNavStartParams']['nTopCount'];
+			$offset = $this->arParams['arNavStartParams']['nOffset'];
 		}
 		$filter = ["IBLOCK_ID"=>$this->arParams['IBLOCK_ID']];
 		$nav = new \Bitrix\Main\UI\PageNavigation("nav");
