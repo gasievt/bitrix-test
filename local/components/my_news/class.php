@@ -21,10 +21,12 @@ class MyNewsComponent extends CBitrixComponent{
 		$nav->allowAllRecords(true)
 			->setPageSize(4)
 			->initFromUri();
-		$limit = empty($limit) ? $nav->getOffset() : $limit;
+		$select = ['NAME', 'PREVIEW_TEXT', 'DETAIL_TEXT', 'ID', 'CODE', 'TIMESTAMP_X'];
+		$limit = empty($limit) ? $nav->getLimit() : $limit;
 		$offset = empty($offset) ? $nav->getOffset() : $offset;
 		$news = \Bitrix\Iblock\ElementTable::getList(
 			[
+				'select' => $select,
 				"filter" => $filter,
 				"offset" => $offset,
 				"limit" => $limit,
